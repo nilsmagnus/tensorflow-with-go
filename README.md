@@ -32,7 +32,7 @@ To get started with go, you need to install the go-bindings:
 (if any of the above fails, find out why on https://www.tensorflow.org/install/install_go )
 
 
-# Name your tensors and operations
+## Name your tensors and operations before training
 
 To be able to address specific parts of your tensorflow-graph, you need to give names
 to the tensors and operations that you are interested in. In this case, it is the input-tensor and the inference-step I want to address.
@@ -48,7 +48,7 @@ Here I have named my input-tensor "imageinput" and the inference-step for "infer
 If you are interested in the result of other tensors or operations, be sure to name them as well. For instance, you will probably be interested in 
 the accuracy of each inference, so go ahead and give the accuracy-operation a proper name.
 
-# Save your model with a tag
+## Save your model with a tag
 
 you need to build a builder with tags:
 
@@ -58,10 +58,13 @@ you need to build a builder with tags:
     
     builder.save()
 
-# Load the model in go
+## Load the model TODO
 
-
-
+TODO TODO
+* load the model
+* session.run with named tensor and operation
+* read the result(s)
+* grab a beer
 
 ## similar blogposts
 
