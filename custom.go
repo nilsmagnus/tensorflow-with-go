@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	tf "github.com/tensorflow/tensorflow/tensorflow/go"
 )
 
@@ -16,7 +17,7 @@ func main() {
 
 	defer model.Session.Close()
 
-	tensor, terr := dummyInputTensor(28 * 28)
+	tensor, terr := dummyInputTensor(28 * 28) // replace this with your own data
 	if terr != nil {
 		fmt.Printf("Error creating input tensor: %s\n", terr.Error())
 		return
@@ -37,7 +38,7 @@ func main() {
 		return
 	}
 
-	fmt.Printf("Got result %v \n", result[0].Value())
+	fmt.Printf("Most likely number in input is %v \n", result[0].Value())
 
 }
 
